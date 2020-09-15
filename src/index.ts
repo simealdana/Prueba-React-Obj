@@ -42,7 +42,7 @@ app.use(IndexRoutes);
 
 // Starting the Server
 app.listen(process.env.PORT || 5000, () => {
-    console.log(`Server on port`, app.get('port'));
+    console.log(`Server on port`, process.env.PORT);
 });
 
 
