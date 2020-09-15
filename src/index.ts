@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 
 // settings
-app.set('port', 5000);
+app.set('port', process.env.port || 5000);
 
 
 // middlewares
