@@ -20,10 +20,6 @@ app.get('/', function (req, res) {
 });
 
 
-// settings
-app.set('port', process.env.port || 5000);
-
-
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -45,7 +41,7 @@ app.use(IndexRoutes);
 // Static files
 
 // Starting the Server
-app.listen(app.get('port'), () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log(`Server on port`, app.get('port'));
 });
 
